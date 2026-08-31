@@ -226,34 +226,65 @@ public class Patterns {
     //         System.out.println();
     //     }
     // }
-    public static void main(String[] args) {
-        int n=4;
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n-i;j++){
-                System.out.print("*");
-            }
-            for(int j=0;j<2*i;j++){
-                System.out.print(" ");
-            }
-            for(int j=0;j<n-i;j++){
-                System.out.print("*");
-            }
+    // public static void main(String[] args) {
+    //     int n=4;
+    //     for(int i=0;i<n;i++){
+    //         for(int j=0;j<n-i;j++){
+    //             System.out.print("*");
+    //         }
+    //         for(int j=0;j<2*i;j++){
+    //             System.out.print(" ");
+    //         }
+    //         for(int j=0;j<n-i;j++){
+    //             System.out.print("*");
+    //         }
             
-            System.out.println();
-        }
-        for(int i=1;i<=n;i++){
-            for(int j=0;j<i;j++){
-                System.out.print("*");
-            }
-            for(int j=0;j<2*n-2*i;j++){
-                System.out.print(" ");
-            }
-            for(int j=0;j<i;j++){
-                System.out.print("*");
-            }
+    //         System.out.println();
+    //     }
+    //     for(int i=1;i<=n;i++){
+    //         for(int j=0;j<i;j++){
+    //             System.out.print("*");
+    //         }
+    //         for(int j=0;j<2*n-2*i;j++){
+    //             System.out.print(" ");
+    //         }
+    //         for(int j=0;j<i;j++){
+    //             System.out.print("*");
+    //         }
             
-            System.out.println();
-        }
+    //         System.out.println();
+    //     }
         
+    // }
+    public static void main(String[]args){
+        int n=5;
+        int space = 2*n-2;
+        for(int i=1;i<=2*n-1;i++){
+            int stars =i;
+            if(stars>n){
+                stars = 2*n-i;
+            }
+            // stars
+            for(int j=0;j<stars;j++){
+                System.out.print("*");
+            }
+
+            //space
+            for(int j=0;j<space;j++){
+                System.out.print(" ");
+            }
+
+            // stars
+            for(int j=0;j<stars;j++){
+                System.out.print("*");
+            }
+            if(i>=n){
+                space+=2;
+            }
+            else{
+                space-=2;
+            }
+            System.out.println();
+        }
     }
 }
